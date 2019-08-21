@@ -11,6 +11,7 @@ body {
 
 .summary__profile {
     text-align: center;
+    text-transform: uppercase;
     margin: 10px 0px;
 }
 
@@ -22,11 +23,26 @@ body {
 }
 
 .summary__profile>h1 {
-    text-transform: uppercase;
     font-size: 3em;
 }
 
 .summary__profile>h2 {
     color: rgb(83, 66, 108);
-    text-transform: uppercase;
+}
+
+.summary__profile>div.summary__profile-contacts {
+    display: inline-block;
+}
+
+.summary__profile>div.summary__profile-contacts>div {
+    display: flex;
+    margin: 0 auto;
+}
+
+.summary__profile>div.summary__profile-contacts>div>i {
+    height: 1.5em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-right: 1em;
+    color: rgb(83, 66, 108);
 }
