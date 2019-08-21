@@ -17,9 +17,11 @@ body {
 
 .summary__profile>img {
     border-radius: 50%;
+    height: 17%;
     width: 200px;
     padding: 3px;
     border: 2px solid rgb(83, 66, 108);
+    object-fit: cover;
 }
 
 .summary__profile>h1 {
@@ -40,7 +42,6 @@ body {
 }
 
 .summary__profile>div.summary__profile-contacts>div>i {
-    height: 1.5em;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-right: 1em;
