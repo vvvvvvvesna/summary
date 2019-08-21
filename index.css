@@ -4,6 +4,14 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.summary i {
+    color: rgb(83, 66, 108);
+}
+
+.summary i::before {
+    font-size: xx-large;
+}
+
 .summary__header {
     height: 50px;
     background-color: rgb(83, 66, 108);
@@ -41,9 +49,28 @@ body {
     margin: 0 auto;
 }
 
-.summary__profile>div.summary__profile-contacts>div>i {
+.summary__profile>div.summary__profile-contacts>div>i, .summary__info>div>i {
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-right: 1em;
+}
+
+.summary__profile>div.summary__profile-contacts>div>p {
+    margin-block-start: 1.6em;
+}
+
+.summary__info {
+    display: flex;
+    margin: 50px;
+}
+
+.summary__info>div {
+    width: 50%;
+    display: inline-flex;
+}
+
+.summary__info>div>h2 {
+    width: 50%;
+    text-transform: uppercase;
     color: rgb(83, 66, 108);
 }
