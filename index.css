@@ -49,7 +49,9 @@ body {
     margin: 0 auto;
 }
 
-.summary__profile>div.summary__profile-contacts>div>i, .summary__info>div>i {
+.summary__profile>div.summary__profile-contacts>div>i, 
+.summary__info>.summary__info-left>div>i, 
+.summary__info>.summary__info-right>div>i {
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-right: 1em;
@@ -62,15 +64,21 @@ body {
 .summary__info {
     display: flex;
     margin: 50px;
+    text-transform: uppercase;
 }
 
 .summary__info>div {
     width: 50%;
+    /* display: inline-flex; */
+}
+
+div.summary__info-left-header,
+div.summary__info-right-header
+{
     display: inline-flex;
 }
 
-.summary__info>div>h2 {
-    width: 50%;
-    text-transform: uppercase;
+div.summary__info-left-header>h2, 
+div.summary__info-right-header>h2 {
     color: rgb(83, 66, 108);
 }
