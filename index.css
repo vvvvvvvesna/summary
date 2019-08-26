@@ -40,24 +40,22 @@ body {
     color: rgb(83, 66, 108);
 }
 
-.summary__profile>div.summary__profile-contacts {
+.summary__profile>div.summary__profile--contacts {
     display: inline-block;
 }
 
-.summary__profile>div.summary__profile-contacts>div {
+.summary__profile>div.summary__profile--contacts>div {
     display: flex;
     margin: 0 auto;
 }
 
-.summary__profile>div.summary__profile-contacts>div>i, 
-.summary__info>.summary__info-left>div>i, 
-.summary__info>.summary__info-right>div>i {
+.summary__profile>div.summary__profile--contacts>div>i, .summary__info>.summary__info-left>div>i, .summary__info>.summary__info-right>div>i {
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-right: 1em;
 }
 
-.summary__profile>div.summary__profile-contacts>div>p {
+.summary__profile>div.summary__profile--contacts>div>p {
     margin-block-start: 1.6em;
 }
 
@@ -72,13 +70,20 @@ body {
     /* display: inline-flex; */
 }
 
-div.summary__info-left-header,
-div.summary__info-right-header
-{
+div.summary__info-left--header, div.summary__info-right--header {
     display: inline-flex;
 }
 
-div.summary__info-left-header>h2, 
-div.summary__info-right-header>h2 {
+div.summary__info-left--header>h2, div.summary__info-right--header>h2 {
     color: rgb(83, 66, 108);
+}
+
+.summary__info-right--salary {
+    background-color: rgba(216, 216, 216, 0.781);
+}
+
+.summary__info-right--salary h1 {
+    font-weight: 200;
+    font-size: 1.7em;
+    text-align: center;
 }
