@@ -4,6 +4,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a, a:-webkit-any-link {
+    color: black;
+}
+
 .summary i {
     color: rgb(83, 66, 108);
 }
@@ -80,6 +84,7 @@ div.summary__info-left--header>h2, div.summary__info-right--header>h2 {
 .summary__info-right--salary {
     background-color: rgba(216, 216, 216, 0.781);
     width: 20em;
+    float: right;
 }
 
 .summary__info-right--salary h1 {
