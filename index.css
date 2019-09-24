@@ -8,6 +8,10 @@ a, a:-webkit-any-link {
     color: black;
 }
 
+.summary {
+    text-align: center;
+}
+
 .summary i {
     color: rgb(83, 66, 108);
 }
@@ -65,12 +69,14 @@ a, a:-webkit-any-link {
 
 .summary__info {
     display: flex;
-    margin: 50px;
+    flex-wrap: wrap;
+    margin: 50px 27%;
     text-transform: uppercase;
 }
 
 .summary__info>div {
     width: 50%;
+    text-align: left;
 }
 
 div.summary__info-left--header, div.summary__info-right--header {
