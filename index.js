@@ -25,6 +25,26 @@ function getCount(start, id, final) {
     }
 }
 
+function fillSkills() {
+    var ctx = document.getElementById('my-skills').getContext('2d');
+    var color = Chart.helpers.color;
+    var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Patient', 'Friendly', 'Eating', 'Happiness', 'Motivation', 'Hard Work', 'Curiosity', 'Sport', 'Politness'],
+            datasets: [{
+                label: "Me",
+                data: [8, 5, 10, 6, 8, 9, 7, 8, 4],
+                backgroundColor: color("rgb(83, 66, 108)").alpha(0.6).rgbString(),
+            }]
+        },
+        options: {
+            scale: { ticks: { beginAtZero: true, max: 10 } },
+
+        }
+    });
+}
+
 const startWMReply = new Date("Jan 23, 2019 10:00:00").getTime();
 const startTaex = new Date("Dec 20, 2018 10:00:00").getTime();
 const finalTaex = new Date("Jul 23, 2019 10:00:00").getTime();
@@ -32,3 +52,5 @@ getCount(startTaex, "taex", finalTaex);
 setInterval(function () {
     getCount(startWMReply, "wm-reply");
 }, 1000)
+
+fillSkills()
