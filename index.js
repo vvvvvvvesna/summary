@@ -4,25 +4,22 @@ function getDifference() {
     return date2.getDate() - date1.getDate();
 }
 
+function div(val, by) {
+    return (val - val % by) / by;
+}
+
 function getCount(start, id, final) {
     if (final) {
         var distance = final - start;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById(id).innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
     } else {
         var now = new Date().getTime();
         var distance = now - start;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById(id).innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
     }
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById(id).innerHTML =`${days} d ${hours} h ${minutes} m ${seconds} s (${days > 365 ? div(days, 365) : 0} y ${div(days % 365, 30)} m)`;
 }
 
 function fillSkills() {
@@ -40,9 +37,15 @@ function fillSkills() {
         },
         options: {
             scale: { ticks: { beginAtZero: true, max: 10 } },
-
+            elements: {
+                point: {
+                    radius: 0
+                }
+            }
         }
     });
+
+    myChart.options.legend.display = false;
 }
 
 const startWMReply = new Date("Jan 23, 2019 10:00:00").getTime();
