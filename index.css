@@ -32,44 +32,43 @@ a:-webkit-any-link {
   text-align: center;
   text-transform: uppercase;
   margin: 10px 0px;
-  /* height: calc(100vh - 60px); */
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.summary__profile > img {
+.summary__profile>img {
   border-radius: 50%;
-  height: 25%;
+  width: 250px;
   padding: 3px;
   border: 2px solid black;
   object-fit: cover;
 }
 
-.summary__profile > h1 {
+.summary__profile>h1 {
   font-size: 3em;
 }
 
-.summary__profile > h2 {
+.summary__profile>h2 {
   color: rgb(104, 106, 108);
 }
 
-.summary__profile > div.summary__profile--contacts {
+.summary__profile>div.summary__profile--contacts {
   display: inline-block;
 }
 
-.summary__profile > div.summary__profile--contacts > div {
+.summary__profile>div.summary__profile--contacts>div {
   display: flex;
   margin: 0 auto;
 }
 
-.summary__profile > div.summary__profile--contacts > div > i,
-.summary__info > .summary__info-left > div > i,
-.summary__info > .summary__info-right > div > i {
+.summary__profile>div.summary__profile--contacts>div>i,
+.summary__info>.summary__info-left>div>i,
+.summary__info>.summary__info-right>div>i {
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-right: 1em;
 }
 
-.summary__profile > div.summary__profile--contacts > div > p {
+.summary__profile>div.summary__profile--contacts>div>p {
   margin-block-start: 1.6em;
 }
 
@@ -80,7 +79,7 @@ a:-webkit-any-link {
   text-transform: uppercase;
 }
 
-.summary__info > div {
+.summary__info>div {
   width: 50%;
   text-align: left;
 }
@@ -90,8 +89,8 @@ div.summary__info-right--header {
   display: inline-flex;
 }
 
-div.summary__info-left--header > h2,
-div.summary__info-right--header > h2 {
+div.summary__info-left--header>h2,
+div.summary__info-right--header>h2 {
   color: rgb(104, 106, 108);
 }
 
@@ -112,7 +111,8 @@ div.summary__info-right--header > h2 {
     display: block;
     margin: 10px;
   }
-  .summary__info > div {
+
+  .summary__info>div {
     width: 100%;
   }
 }
