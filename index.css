@@ -17,6 +17,9 @@ a:-webkit-any-link {
 
 .summary i {
   color: rgb(104, 106, 108);
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-right: 1em;
 }
 
 .summary i::before {
@@ -58,14 +61,6 @@ a:-webkit-any-link {
 .summary__profile>div.summary__profile--contacts>div {
   display: flex;
   margin: 0 auto;
-}
-
-.summary__profile>div.summary__profile--contacts>div>i,
-.summary__info>.summary__info-left>div>i,
-.summary__info>.summary__info-right>div>i {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-right: 1em;
 }
 
 .summary__profile>div.summary__profile--contacts>div>p {
