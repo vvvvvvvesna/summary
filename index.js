@@ -19,23 +19,29 @@ function getCount(work) {
   } y ${div(days % 365, 30)} m)`;
 }
 
-const worksArray = [{
-  isOngoing: true,
-  start: new Date("Dec 23, 2022 10:00:00").getTime(),
-  name: "freelance"
-},
-{
-  isOngoing: false,
-  start: new Date("Jan 23, 2019 10:00:00").getTime(),
-  final: new Date("Dec 23, 2022 10:00:00").getTime(),
-  name: "wm-reply"
-},
-{
-  isOngoing: false,
-  start: new Date("Dec 20, 2018 10:00:00").getTime(),
-  final: new Date("Jul 23, 2019 10:00:00").getTime(),
-  name: "taex"
-}]
+const worksArray = [
+  {
+    isOngoing: true,
+    start: new Date("Feb 23, 2023 10:00:00").getTime(),
+    name: "sciencesoft"
+  },
+  {
+    isOngoing: true,
+    start: new Date("Dec 1, 2022 10:00:00").getTime(),
+    name: "trackdrag"
+  },
+  {
+    isOngoing: false,
+    start: new Date("Jan 23, 2019 10:00:00").getTime(),
+    final: new Date("Dec 23, 2022 10:00:00").getTime(),
+    name: "wm-reply"
+  },
+  {
+    isOngoing: false,
+    start: new Date("Dec 20, 2018 10:00:00").getTime(),
+    final: new Date("Jul 23, 2019 10:00:00").getTime(),
+    name: "taex"
+  }]
 
 worksArray.forEach(work => {
   if (work.isOngoing) {
